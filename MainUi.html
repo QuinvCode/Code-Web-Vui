@@ -1,0 +1,131 @@
+<!-- MainUi.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch Vụ Tăng Tương Tác</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            animation: fadeIn 1s ease-in-out;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #1e3a8a);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 15px #00e6e6, 0 0 30px #00e6e6;
+        }
+        .neon-card:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+            transform: scale(1.05) rotateY(10deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen p-8 text-white">
+    <header class="flex justify-between items-center mb-6">
+        <h1 class="text-4xl font-bold neon-text">Thế Vinh - DV - MXH</h1>
+        <div class="flex items-center space-x-4">
+            <div class="bg-white text-black p-4 rounded-lg shadow-lg flex items-center">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="w-12 h-12 rounded-full">
+                <div class="ml-4">
+                    <p><strong>Tên:</strong> XinChao1</p>
+                    <p><strong>Số dư:</strong> 0 VND</p>
+                    <a href="#" class="text-blue-500">Lịch sử giao dịch</a>
+                </div>
+                <button class="ml-4 p-2 bg-white rounded-lg shadow-lg">
+                <button class="ml-4 p-2 bg-white rounded-lg shadow-lg" onclick="logout()">
+            
+               
+                    <img src="https://cdn-icons-png.flaticon.com/512/126/126467.png" alt="Đăng xuất" class="w-6 h-6">
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-lg transition neon-card text-black">
+            <a href="https://www.facebook.com/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Dịch vụ Facebook" class="w-16 h-16 mx-auto mb-4">
+            </a>
+            <h3 class="text-xl font-bold">Dịch vụ  Facebook</h3>
+            <p class="text-gray-600">Dịch vụ Facebook.</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition" onclick="toggleOptions('fb-options')">Đặt Ngay</button>
+            <div id="fb-options" class="hidden mt-4 bg-gray-100 p-4 rounded-lg">
+                <p class="text-black font-semibold">Chọn dịch vụ:</p>
+                <ul class="text-black">
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Buff follow ( Việt )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Buff follow ( Tây )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Buff view story</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Tăng comment bài viết</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Tăng share bài viết </a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Tăng cảm xúc bài viết ( Việt ) </a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="FB-dichvu.html" class="text-blue-500 font-bold">Tăng cảm xúc bài viết ( Tây ) </a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg transition neon-card text-black">
+            <a href="https://www.instagram.com/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Dịch vụ Instagram" class="w-16 h-16 mx-auto mb-4">
+            </a>
+            <h3 class="text-xl font-bold">Dịch vụ  Instagram</h3>
+            <p class="text-gray-600">Dịch vụ Instagram.</p>
+            <button class="mt-4 bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-600 transition" onclick="toggleOptions('ig-options')">Đặt Ngay</button>
+            <div id="ig-options" class="hidden mt-4 bg-gray-100 p-4 rounded-lg">
+                <p class="text-black font-semibold">Chọn dịch vụ:</p>
+                <ul class="text-black">
+                    <li><a href="IN-dichvu.html" class="text-yellow-500 font-bold">Tăng follow ( Việt )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="IN-dichvu.html" class="text-yellow-500 font-bold">Tăng follow ( Tây)</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="IN-dichvu.html" class="text-yellow-500 font-bold">Tăng like ảnh ( Việt ), Tây</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="IN-dichvu.html" class="text-yellow-500 font-bold">Buff like ảnh ( Tây ) </a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="IN-dichvu.html" class="text-yellow-500 font-bold">Buff view story</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg transition neon-card text-black">
+            <a href="https://www.tiktok.com/">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="Dịch vụ TikTok" class="w-16 h-16 mx-auto mb-4">
+            </a>
+            <h3 class="text-xl font-bold">Dịch vụ  TikTok</h3>
+            <p class="text-gray-600">Dịch vụ Tik Tok.</p>
+            <button class="mt-4 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition" onclick="toggleOptions('tt-options')">Đặt Ngay</button>
+            <div id="tt-options" class="hidden mt-4 bg-gray-100 p-4 rounded-lg">
+                <p class="text-black font-semibold">Chọn dịch vụ:</p>
+                <ul class="text-black">
+                    <li><a href="TT-dichvu.html" class="text-red-500 font-bold">Buff like video ( Việt )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="TT-dichvu.html" class="text-red-500 font-bold">Buff like video ( Tây )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="TT-dichvu.html" class="text-red-500 font-bold">Buff follow ( Việt )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="TT-dichvu.html" class="text-red-500 font-bold">Buff follow ( Tây )</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                    <li><a href="TT-dichvu.html" class="text-red-500 font-bold">Buff view video</a> <img src="https://cdn-icons-png.flaticon.com/512/126/126472.png" class="inline w-4 h-4"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleOptions(id) {
+            let options = document.getElementById(id);
+            options.classList.toggle("hidden");
+        }
+
+        function toggleOptions(id) {
+            let options = document.getElementById(id);
+            options.classList.toggle("hidden");
+        }
+
+        function logout() {
+            window.location.href = "login.html";
+        }
+        
+
+    </script>
+</body>
+</html>
